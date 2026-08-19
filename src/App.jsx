@@ -30,7 +30,9 @@ function App() {
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a
-              href="#"
+              href="/assets/CV/CV_ATS_AZIZ.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600"
             >
               Download CV <i className="ri-download-line ri-lg"></i>
@@ -138,47 +140,43 @@ function App() {
         </p>
 
         <div className="proyek-box mt-14 grid grid-cols-1 gap-4 sm:flex sm:flex-wrap sm:justify-center">
-  {listProyek.map((proyek) => (
-    <div
-      key={proyek.id}
-      className="p-4 bg-zinc-800 rounded-md w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]"
-    >
-      <img src={proyek.gambar} alt="Proyek Image" loading="lazy" />
-
-      <div className="text-center">
-        <h1 className="text-2xl font-bold my-4">
-          {proyek.nama}
-        </h1>
-
-        <p className="text-base/loose mb-4">
-          {proyek.desk}
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-2">
-          {proyek.tools.map((tool, index) => (
-            <p
-              className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
-              key={index}
+          {listProyek.map((proyek) => (
+            <div
+              key={proyek.id}
+              className="p-4 bg-zinc-800 rounded-md w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]"
             >
-              {tool}
-            </p>
+              <img src={proyek.gambar} alt="Proyek Image" loading="lazy" />
+
+              <div className="text-center">
+                <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
+
+                <p className="text-base/loose mb-4">{proyek.desk}</p>
+
+                <div className="flex flex-wrap justify-center gap-2">
+                  {proyek.tools.map((tool, index) => (
+                    <p
+                      className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
+                      key={index}
+                    >
+                      {tool}
+                    </p>
+                  ))}
+                </div>
+
+                <div className="mt-8">
+                  <a
+                    href={proyek.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-violet-700 p-3 rounded-lg block border border-zinc-600"
+                  >
+                    Lihat Website
+                  </a>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
-
-        <div className="mt-8">
-          <a
-            href={proyek.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-violet-700 p-3 rounded-lg block border border-zinc-600"
-          >
-            Lihat Website
-          </a>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
       </div>
       {/* PROYEK END */}
 
