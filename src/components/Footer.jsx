@@ -1,22 +1,28 @@
 const Footer = () => {
   return (
     <div className="mt-32 py-4 md:flex-row flex-col gap-6 md:0 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Portfolio</h1>
-        <div className="flex gap-7">
-            <a href="#beranda">Beranda</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#proyek">Proyek</a>
-        </div>
+      <h1 className="text-2xl font-bold">Portfolio</h1>
+      <div className="flex gap-7">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#proyek">Proyek</a>
+      </div>
 
-        <div className="flex items-center gap-3">
-            <a href="#">
-                <i className="ri-github-fill ri-2x"></i>
-                <i className="ri-linkedin-fill ri-2x"></i>
-                <i className="ri-instagram-fill ri-2x"></i>
-            </a>
-        </div>
+      <div className="flex items-center gap-3">
+        <a href="https://github.com/Azrafin" target="_blank">
+          <i className="ri-github-fill ri-2x"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/aziz-rahmad-arifin-730b40318/" target="_blank">
+          <i className="ri-linkedin-fill ri-2x"></i>
+        </a>
+
+        <a href="https://www.instagram.com/azrafin.it/" target="_blank">
+          <i className="ri-instagram-fill ri-2x"></i>
+        </a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
